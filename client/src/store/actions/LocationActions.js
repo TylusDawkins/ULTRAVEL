@@ -10,7 +10,7 @@ export const LoadLocations = () => {
             const locations = await GetLocationList()
             dispatch({
                 type: GET_LOCATION_LIST,
-                payload: locations.results
+                payload: locations.locations
             })
         } catch (error) {
             throw error
