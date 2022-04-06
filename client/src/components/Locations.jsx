@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { LoadLocations } from '../store/actions/MovieActions'
+import { LoadLocations } from '../store/actions/LocationActions'
 
 const mapStateToProps = ({ locationState }) => {
   return { locationState }
