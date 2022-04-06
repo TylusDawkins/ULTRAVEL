@@ -18,14 +18,12 @@ const Reviews = (props) => {
 
   useEffect(() => {
     props.fetchReviews(id)
-  },[id])
-console.log(props.reviewState.review)
+  }, [id])
+  console.log(props.reviewState.review)
   return (
     <ul>
-        {props.reviewState.review.description}
-      {/* {props.movieDetailsState.movieDetails.map((movie) => (
-          <li key={movie.id}>{movie.overview}</li>
-        ))} */}
+      {props.reviewState.review.description}
+
     </ul>
   )
 }
