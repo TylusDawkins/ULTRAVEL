@@ -20,7 +20,7 @@ const Locations = (props) => {
     props.fetchLocations()
   }, [])
 
-  console.log(props.locationState)
+  console.log(props.locationState.locationList)
   return (
     <div>
       {/* {props.locationState.locations.map((location) => (
