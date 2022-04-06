@@ -1,7 +1,7 @@
 import './styles/App.css'
 import { Routes, Route } from 'react-router-dom'
-import LocationList from './components/LocationList'
-import LocationDetails from './components/LocationDetails'
+import LocationList from './components/Locations'
+import Reviews from './components/Reviews'
 
 
 const App = () => {
@@ -13,7 +13,7 @@ const App = () => {
       </div>
       <Routes>
         <Route path='/' element={<LocationList />} />
-        <Route path="/locations-list/:id" element={<LocationDetails />} />
+        <Route path="/locations-list/:id" element={<Reviews />} />
       </Routes>
     </div>
   )

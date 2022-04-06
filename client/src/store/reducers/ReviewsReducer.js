@@ -1,6 +1,6 @@
 const { GET_REVIEWS } = require('../types')
 const iState = {
-    movieDetails: {}
+    reviews: []
 }
 const ReviewsReducer = (state = iState, action) => {
     switch (action.type) {
