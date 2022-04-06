@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { LoadReviews } from '../store/actions/MovieActions'
+import { LoadReviews } from '../store/actions/LocationActions'
 
 const mapStateToProps = ({ reviewsState }) => {
   return { reviewsState }
