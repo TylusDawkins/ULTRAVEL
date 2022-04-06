@@ -19,13 +19,20 @@ const Reviews = (props) => {
   useEffect(() => {
     props.fetchReviews(id)
   }, [id])
-  console.log(props.reviewState.review)
-  return (
+  console.log(props.reviewsState)
+
+  if(props.reviewsState.reviews.location) {
+    return (
     <ul>
-      {props.reviewState.review.description}
+      {props.reviewsState.reviews.location.description} 
+      {props.reviewsState.reviews.location.name}
+      <img src={props.reviewsState.reviews.location.image}/>     
 
     </ul>
-  )
+    )
+  } else {
+    return <h1>Loading</h1>
+  }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Reviews)

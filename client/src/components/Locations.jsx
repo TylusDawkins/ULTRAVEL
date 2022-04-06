@@ -19,13 +19,12 @@ const Locations = (props) => {
     props.fetchLocations()
   }, [])
 
-  console.log(props.locationState)
   return (
     <div>
       {props.locationState.locationList.map((location) => (
         
         <ul key={location._id}>
-          <Link to={`/location-list/${location._id}`}>{location.name} <img src={location.image}/></Link>
+          <Link to={`/locations-list/${location._id}`}>{location.name} <img src={location.image}/></Link>
 
         </ul>
       ))}
