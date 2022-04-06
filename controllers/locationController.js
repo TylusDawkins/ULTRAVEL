@@ -1,4 +1,4 @@
-const Location = require('../models/location');
+const { Location } = require('../models');
  
 const getAllLocations = async (req, res) => {
    try {
