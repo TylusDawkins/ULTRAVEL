@@ -6,7 +6,7 @@ import ReviewsReducer from './reducers/ReviewsReducer'
 
 const store = createStore(
     combineReducers({
-        locationListState: LocationListReducer,
+        locationState: LocationListReducer,
         reviewsState: ReviewsReducer
     }),
     composeWithDevTools(applyMiddleware(thunk))
