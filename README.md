@@ -69,9 +69,6 @@ ULTRAVEL
 * User-specific Profiles
 * Reminders
   * Water/Fertilize/Repot/Prune/Mist
-    * Time (morning/afternoon/evening)
-    * Last completed (calendar date)
-    * Cycle (7 days)
 
 &nbsp;
 ### **DEPLOYED APP AT [LUSH](https://murmuring-dusk-62029.herokuapp.com/)**
@@ -89,4 +86,3 @@ ULTRAVEL
 #### **[Fiddle Leaf Fig Image](https://cmsmedia.remodelista.com/wp-content/uploads/2019/01/fiddle-leaf-fig-tree-ikea.png)**
 #### **[Ficus Bonsai Image](https://i.ebayimg.com/images/g/QQkAAOSwuxFYtZKt/s-l640.jpg)**
 #### **[Manjula Pothos Image](https://houseplantgardening.com/wp-content/uploads/2021/05/manjula-pothos.jpg)**
-#### **[Cebu Blue Pothos Image](https://i0.wp.com/laidbackgardener.blog/wp-content/uploads/2019/01/20190123b-stayathomeplantmom-pinterest.com_-1.jpg?resize=950%2C942&ssl=1)**
