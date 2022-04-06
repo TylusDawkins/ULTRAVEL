@@ -20,15 +20,15 @@ const Locations = (props) => {
     props.fetchLocations()
   }, [])
 
-  console.log(props.locationsState.locations)
+  console.log(props.locationState)
   return (
     <div>
-      {props.locationState.locations.map((location) => (
+      {/* {props.locationState.locations.map((location) => (
         <ul key={location._id}>
           <Link to={`/location-list/${location._id}`}>{location.title} <img src={`${IMAGE_BASE_PATH}${location.poster_path}`} /></Link>
 
         </ul>
-      ))}
+      ))} */}
     </div>
   )
 }
