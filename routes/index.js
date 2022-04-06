@@ -8,5 +8,5 @@ router.get('/locations', locationController.getAllLocations)
 router.get('/locations/:id', locationController.getLocationById)
 router.post('/locations/:id', reviewController.createReview)
 router.get('/locations/:id/reviews', reviewController.getReviewsByLocation)
- 
+
 module.exports = router;

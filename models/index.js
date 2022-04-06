@@ -7,5 +7,5 @@ const Review = model('reviews', ReviewSchema)
  
 module.exports = {
  Location,
- Review
+ Review,
 }

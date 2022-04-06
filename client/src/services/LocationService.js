@@ -3,6 +3,7 @@ import Client from './'
 export const GetLocationList = async () => {
     try {
         const res = await Client.get(`/`)
+        console.log(res.data)
 
         return res.data
     } catch (error) {
