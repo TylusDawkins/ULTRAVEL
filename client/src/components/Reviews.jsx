@@ -19,13 +19,15 @@ const Reviews = (props) => {
   useEffect(() => {
     props.fetchReviews(id)
   }, [id])
-  console.log(props.reviewState.review)
+  console.log(props.reviewsState.reviews)
+
+  if(props.reviewsState.reviews.reviews) {
   return (
     <ul>
-      {props.reviewState.review.description}
+      {props.reviewsState.reviews.reviews[0].text}
 
     </ul>
-  )
+  )}
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Reviews)

@@ -21,7 +21,7 @@ export const GetLocation = async (id) => {
 
 export const GetReviews = async (id) => {
     try {
-        const res = await Client.get(`/${id}`)
+        const res = await Client.get(`/${id}/reviews`)
         return res.data
     } catch (error) {
         throw error
