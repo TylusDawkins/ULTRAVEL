@@ -10,7 +10,7 @@ export const GetLocationList = async () => {
     }
 }
 
-export const GetReviews = async (id) => {
+export const GetLocation = async (id) => {
     try {
         const res = await Client.get(`/${id}`)
         return res.data
@@ -18,3 +18,29 @@ export const GetReviews = async (id) => {
         throw error
     }
 }
+
+export const GetReviews = async (id) => {
+    try {
+        const res = await Client.get(`/${id}/reviews`)
+        console.log(res)
+        return res.data
+    } catch (error) {
+        throw error
+    }
+}
+
+export const AddReview = async (id) => {
+    try {
+        const res = await Client.post(`/${id}`, {
+            rating: rating,
+            text: text,
+            author: author 
+
+        })
+        console.log(res)
+        return res.data
+    } catch (error) {
+        throw error
+    }
+}
+

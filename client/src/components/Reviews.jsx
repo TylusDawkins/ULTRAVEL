@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { LoadReviews } from '../store/actions/LocationActions'
+import AddReviewForm from './AddReviewForm'
 
 const mapStateToProps = ({ reviewsState }) => {
   return { reviewsState }
@@ -19,13 +20,26 @@ const Reviews = (props) => {
   useEffect(() => {
     props.fetchReviews(id)
   }, [id])
-  console.log(props.reviewState.review)
-  return (
-    <ul>
-      {props.reviewState.review.description}
+  // console.log(props.reviewsState.reviews)
 
-    </ul>
-  )
+  if (props.reviewsState.reviews.reviews) {
+    return (
+      <div>
+        <ul>
+          <li>Traveler: {props.reviewsState.reviews.reviews[0].author}</li>
+          <li>Rating: {props.reviewsState.reviews.reviews[0].rating}</li>
+          <li>Review: {props.reviewsState.reviews.reviews[0].text}</li>
+
+
+
+          {/* <AddReviewForm /> */}
+
+        </ul>
+      </div>
+    )
+  } else {
+    return <h1>Loading</h1>
+  }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Reviews)
