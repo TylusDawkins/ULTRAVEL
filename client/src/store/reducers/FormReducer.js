@@ -16,6 +16,15 @@ const FormReducer = (state = iState, action) => {
             return { ...state, text: action.payload }
         case ADD_LOCATION:
             return { ...state, location: action.payload }
+const { ADD_REVIEW } = require('../types')
+const iState = {
+    userReview: {}
+    
+}
+const FormReducer = (state = iState, action) => {
+    switch (action.type) {
+        case ADD_REVIEW:
+            return { ...state, reviews: action.payload }
         default: 
             return { ...state }
     }

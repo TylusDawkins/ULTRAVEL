@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { LoadReviews } from '../store/actions/LocationActions'
 import { Link } from 'react-router-dom'
+import AddReviewForm from './AddReviewForm'
 
 const mapStateToProps = ({ reviewsState }) => {
   return { reviewsState }

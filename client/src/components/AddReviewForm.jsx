@@ -8,7 +8,6 @@ const mapStateToProps = ({ formState }) => {
     console.log(formState)
 }
 
-
 const mapDispatchToProps = (dispatch) => {
     return {
         createReview: () => dispatch(WriteReview()),
@@ -33,11 +32,17 @@ const handleChange = (event) => {
 }
 
 console.log(props.formState)
-    return (
-        <div className="form-wrapper">
-            <h1>Leave a Review!</h1>
-            <br />
-            <form onSubmit={onSubmit}>
+        createReview: () => dispatch(WriteReview())
+    }
+}
+
+// const handleChange = (key) = {
+
+// }
+
+const AddReviewForm = (props) => {
+
+            <form onSubmit={props.createReview}>
                 <div>
                     <label><b>Author</b></label>
                     <input
@@ -65,6 +70,35 @@ console.log(props.formState)
                         name={props.formState.text}
                         placeholder="Enter your review..."
                         onChange={handleChange}
+                        placeholder="Enter ride name..."
+                        onChange={props.handleNameChange}
+                    />
+                </div>
+                <div>
+                    <label><b>Description:</b></label>
+                    <input
+                        type="text"
+                        value={props.description}
+                        placeholder="Enter description..."
+                        onChange={props.handleDescriptionChange}
+                    />
+                </div>
+                <div>
+                    <label><b>Min Height:</b></label>
+                    <input
+                        type="text"
+                        value={props.minHeight}
+                        placeholder="Enter min height..."
+                        onChange={props.handleMinHeightChange}
+                    />
+                </div>
+                <div>
+                    <label><b>Image:</b></label>
+                    <input
+                        type="text"
+                        value={props.imagePath}
+                        placeholder="Enter ride image path..."
+                        onChange={props.handleImagePathChange}
                     />
                 </div>
                 <div className="button-wrapper">
@@ -74,5 +108,4 @@ console.log(props.formState)
         </div>
     )
 }
-
 export default connect(mapStateToProps, mapDispatchToProps) (AddReviewForm)

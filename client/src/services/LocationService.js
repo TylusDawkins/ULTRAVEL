@@ -32,6 +32,14 @@ export const GetReviews = async (id) => {
 export const AddReview = async (id, postReview) => {
     try {
         const res = await Client.post(`/${id}`, postReview)
+export const AddReview = async (id) => {
+    try {
+        const res = await Client.post(`/${id}`, {
+            rating: rating,
+            text: text,
+            author: author 
+
+        })
         console.log(res)
         return res.data
     } catch (error) {

@@ -2,9 +2,11 @@ import {
     GetLocationList,
     GetReviews,
     AddReview,
-
 } from '../../services/LocationService'
 import { ADD_REVIEW, GET_LOCATION_LIST, GET_REVIEWS, ADD_AUTHOR } from '../types'
+    AddReview
+} from '../../services/LocationService'
+import { ADD_REVIEW, GET_LOCATION_LIST, GET_REVIEWS } from '../types'
 
 export const LoadLocations = () => {
     return async (dispatch) => {
@@ -47,6 +49,7 @@ export const WriteReview = (postReview) => {
     }
 }
 
+
 export const AuthorReview = () => {
     return async (dispatch) => {
         try {
@@ -60,4 +63,3 @@ export const AuthorReview = () => {
         }
     }
 }
-
