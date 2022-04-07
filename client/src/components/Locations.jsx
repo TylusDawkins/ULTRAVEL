@@ -15,17 +15,17 @@ const mapDispatchToProps = (dispatch) => {
 
 const Locations = (props) => {
 
-  const IMAGE_BASE_PATH = 'https://image.tmdb.org/t/p/w500'
+
   useEffect(() => {
     props.fetchLocations()
   }, [])
 
-  console.log(props.locationState)
+  console.log(props.locationState.locations)
   return (
     <div>
-      {/* {props.locationState.locations.map((location) => (
+      {/* {props.locationState.map((location) => (
         <ul key={location._id}>
-          <Link to={`/location-list/${location._id}`}>{location.title} <img src={`${IMAGE_BASE_PATH}${location.poster_path}`} /></Link>
+          <Link to={`/location-list/${location._id}`}>{location.title}/></Link>
 
         </ul>
       ))} */}
