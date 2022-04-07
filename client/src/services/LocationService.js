@@ -28,3 +28,19 @@ export const GetReviews = async (id) => {
         throw error
     }
 }
+
+export const AddReview = async (id) => {
+    try {
+        const res = await Client.post(`/${id}`, {
+            rating: rating,
+            text: text,
+            author: author 
+
+        })
+        console.log(res)
+        return res.data
+    } catch (error) {
+        throw error
+    }
+}
+

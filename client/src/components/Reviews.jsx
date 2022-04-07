@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { LoadReviews } from '../store/actions/LocationActions'
+import AddReviewForm from './AddReviewForm'
 
 const mapStateToProps = ({ reviewsState }) => {
   return { reviewsState }
@@ -25,10 +26,13 @@ const Reviews = (props) => {
     return (
       <div>
         <ul>
-          {props.reviewsState.reviews.reviews[0].text}
-          {props.reviewsState.reviews.reviews[0].author}
+          <li>Traveler: {props.reviewsState.reviews.reviews[0].author}</li>
+          <li>Rating: {props.reviewsState.reviews.reviews[0].rating}</li>
+          <li>Review: {props.reviewsState.reviews.reviews[0].text}</li>
 
 
+
+          {/* <AddReviewForm /> */}
 
         </ul>
       </div>
