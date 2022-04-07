@@ -15,20 +15,19 @@ const mapDispatchToProps = (dispatch) => {
 
 const Locations = (props) => {
 
-
   useEffect(() => {
     props.fetchLocations()
   }, [])
 
-  console.log(props.locationState.locations)
   return (
     <div>
-      {/* {props.locationState.map((location) => (
+      {props.locationState.locationList.map((location) => (
+        
         <ul key={location._id}>
-          <Link to={`/location-list/${location._id}`}>{location.title}/></Link>
+          <Link to={`/locations-list/${location._id}`}>{location.name} <img src={location.image}/></Link>
 
         </ul>
-      ))} */}
+      ))}
     </div>
   )
 }

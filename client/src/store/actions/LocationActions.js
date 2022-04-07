@@ -1,8 +1,10 @@
 import {
     GetLocationList,
-    GetReviews
+    GetReviews,
+    AddReview,
+
 } from '../../services/LocationService'
-import { GET_LOCATION_LIST, GET_REVIEWS } from '../types'
+import { ADD_REVIEW, GET_LOCATION_LIST, GET_REVIEWS, ADD_AUTHOR } from '../types'
 
 export const LoadLocations = () => {
     return async (dispatch) => {
@@ -10,7 +12,7 @@ export const LoadLocations = () => {
             const locations = await GetLocationList()
             dispatch({
                 type: GET_LOCATION_LIST,
-                payload: locations.results
+                payload: locations.locations
             })
         } catch (error) {
             throw error
@@ -30,3 +32,32 @@ export const LoadReviews = (id) => {
         }
     }
 }
+
+export const WriteReview = (postReview) => {
+    return async (dispatch) => {
+        try {
+            const review = await AddReview(postReview)
+            dispatch({
+                type: ADD_REVIEW,
+                payload: review
+            })
+        } catch (error) {
+            throw error
+        }
+    }
+}
+
+export const AuthorReview = () => {
+    return async (dispatch) => {
+        try {
+            const author = await AddReview()
+            dispatch({
+                type: ADD_AUTHOR,
+                payload: author
+            })
+        } catch (error) {
+            throw error
+        }
+    }
+}
+
