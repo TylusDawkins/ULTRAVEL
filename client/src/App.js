@@ -2,6 +2,7 @@ import './styles/App.css'
 import { Routes, Route } from 'react-router-dom'
 import Locations from './components/Locations'
 import Reviews from './components/Reviews'
+import  AddReviewForm  from './components/AddReviewForm'
 
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Locations />} />
         <Route path="/locations-list/:id" element={<Reviews />} />
+        <Route path='/locations-list/:id/addreview' element={<AddReviewForm />} />
       </Routes>
     </div>
   )
